@@ -21,7 +21,7 @@ sudo make install
 sudo ldconfig
 ```
 # Install
-### Clone repository
+### Clone the repository
 ```
 roscd; cd ../src
 git clone https://github.com/willie5588912/rsc_car_course.git
@@ -61,7 +61,7 @@ You can use minicom to do sanity check.
 ```
 sudo apt-get install mincom
 ```
-Set up the protocol parameters (Do this only at the first time):
+Set up the protocol parameters (do this only at the first time):
 ```
 sudo minicom -s
 (If you have set up the parameters, just type "minicom" in terminal. The minicom will be launched.)
