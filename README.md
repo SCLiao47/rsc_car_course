@@ -34,7 +34,7 @@ sudo usermod -a -G dialout <username>
 ```
 
 # Usage
-## Real car
+### Real car
 ```
 roslaunch rsc_car_ros_control rsc_car_ros_control.launch
 ```
@@ -47,16 +47,16 @@ So you can publish cmd_vel to control the car. For example, you can use rqt_robo
 rosrun rqt_robot_steering rqt_robot_steering _default_topic:=/rsc_car_diff_drive_controller/cmd_vel
 ```
 
-## Simulation (optional)
+### Simulation (optional)
 ```
 roslaunch rsc_car_description rsc_car_gazebo.launch
 ```
 
 # Trouble Shooting
-## Wrong direction / Don't move
+### Wrong direction / Don't move
 Please use Faulhaber motion manager to check the node number of the controllers. The right wheel should be node 1 and the left wheel should be node 2. Also, make sure the battery voltage should not be lower than 12V.
 
-## Tool: Minicom
+### Tool: Minicom
 You can use minicom to do sanity check.
 ```
 sudo apt-get install mincom
