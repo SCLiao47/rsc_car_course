@@ -4,8 +4,8 @@
 #include <ros/ros.h>
 
 #define PI 3.1415926
-#define G_GEAR_RATIO_R 200 
-#define G_GEAR_RATIO_L 200 
+#define G_GEAR_RATIO_R 43  
+#define G_GEAR_RATIO_L 43  
 #define ENC_FULL 2048 // This is for RSC small car 
 
 HwTmIntf::HwTmIntf(

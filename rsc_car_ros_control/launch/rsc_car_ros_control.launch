@@ -1,6 +1,6 @@
 <launch>
   <arg name="rqt_steering" default="false"/>
-  <arg name="model" default="$(find rsc_car_description)/robots/rsc_car.urdf.xacro"/>
+  <arg name="model" default="$(find rsc_car_description)/robots/rsc_car.urdf"/>
   <arg name="diffconfig" default="$(find rsc_car_ros_control)/config/rsc_car_ros_control_real.yaml"/>
 
   <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
