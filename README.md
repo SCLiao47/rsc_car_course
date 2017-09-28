@@ -43,7 +43,7 @@ roslaunch rsc_car_ros_control rsc_car_ros_control.launch
 * Subscribe topic: /rsc_car_diff_drive_controller/cmd_vel
 * Publish topic: /rsc_car_diff_drive_controller/odom
 
-So you can publish cmd_vel to control the car. For example, you can use rqt_robot_steering, and use the topic name:**/rsc_car_diff_drive_controller/cmd_vel**
+So you can publish cmd_vel to control the car. For example, you can use rqt_robot_steering, and use the topic name: **/rsc_car_diff_drive_controller/cmd_vel**
 ```
 rosrun rqt_robot_steering rqt_robot_steering _default_topic:=/rsc_car_diff_drive_controller/cmd_vel
 ```
@@ -57,7 +57,7 @@ roslaunch rsc_car_description rsc_car_gazebo.launch
 ### Wrong direction / Don't move
 Please use Faulhaber motion manager to check the node number of the controllers. The right wheel should be node 1 and the left wheel should be node 2. Also, make sure the battery voltage should not be lower than 12V.
 
-### Tool for sanity check: Minicom
+### A tool for sanity check: Minicom
 ```
 sudo apt-get install mincom
 ```
