@@ -21,26 +21,30 @@ sudo make install
 sudo ldconfig
 ```
 # Install
+### Clone repository
 ```
 roscd; cd ../src
 git clone https://github.com/willie5588912/rsc_car_course.git
 cd ..
 catkin_make
 ```
+### Add group
+```
+sudo usermod -a -G dialout <username>
+```
+
 # Usage
 ## Real car
 ```
 roslaunch rsc_car_ros_control rsc_car_ros_control.launch
 ```
-Subscribe topic:
-* /rsc_car_diff_drive_controller/cmd_vel
 
-Publish topic:
-* /rsc_car_diff_drive_controller/odom
+* Subscribe topic: /rsc_car_diff_drive_controller/cmd_vel
+* Publish topic: /rsc_car_diff_drive_controller/odom
 
 So you can publish cmd_vel to control the car. For example, you can use rqt_robot_steering, using topic name **/rsc_car_diff_drive_controller/cmd_vel**
 ```
-rosrun rqt_robot_steering rqt_robot_steering
+rosrun rqt_robot_steering rqt_robot_steering _default_topic:=/rsc_car_diff_drive_controller/cmd_vel
 ```
 
 ## Simulation (optional)
