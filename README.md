@@ -52,3 +52,30 @@ rosrun rqt_robot_steering rqt_robot_steering _default_topic:=/rsc_car_diff_drive
 roslaunch rsc_car_description rsc_car_gazebo.launch
 ```
 
+# Trouble Shooting
+## Wrong direction / Don't move
+Please use Faulhaber motion manager to check the node number of the controllers. The right wheel should be node 1 and the left wheel should be node 2. Also, make sure the battery voltage should not be lower than 12V.
+
+## Tool: Minicom
+You can use minicom to do sanity check.
+```
+sudo apt-get install mincom
+```
+Set up the protocol parameters (Do this only at the first time):
+```
+sudo minicom -s
+(If you have set up the parameters, just type "minicom" in terminal. The minicom will be launched.)
+```
+1. Choose "**Serial port setup**", and the settings should be as following:
+![Minicom Settings](doc/minicom_settings.png)
+2. Press Enter and then choose "**Save setup as dfl**"
+3. Choose "**Exit**", and the you will be in minicom.
+4. Press "**Ctrl + a**". Next, release and press "**z**",  and then press "**e**" to enable echo on the screen.
+5. You can send commands now.
+```
+en (Enable motors. The motors should output torque.)
+1v100 (The motor of node 1 will move in 100rpm.)
+v0 (Stop all the motors)
+```
+
+
