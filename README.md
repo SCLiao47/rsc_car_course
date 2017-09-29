@@ -7,7 +7,7 @@ Please follow this [link](http://wiki.ros.org/indigo/Installation/Ubuntu) to ins
 
 ### ROS Control
 ```
-sudo apt-get install ros-indigo-ros-control ros-indigo-ros-controllers
+sudo apt-get install ros-indigo-ros-control ros-indigo-ros-controllers ros-indigo-gazebo-ros-control
 ```
 
 ### Serial Library
@@ -50,6 +50,7 @@ rosrun rqt_robot_steering rqt_robot_steering _default_topic:=/rsc_car_diff_drive
 
 ### Simulation (optional)
 ```
+
 roslaunch rsc_car_description rsc_car_gazebo.launch
 ```
 
@@ -59,7 +60,7 @@ Please use Faulhaber motion manager to check the node number of the controllers.
 
 ### A tool for sanity check: Minicom
 ```
-sudo apt-get install mincom
+sudo apt-get install minicom
 ```
 Set up the protocol parameters (do this only at the first time):
 ```
