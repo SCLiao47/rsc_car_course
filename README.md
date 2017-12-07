@@ -32,8 +32,8 @@ catkin_make
 ```
 sudo usermod -a -G dialout <username>
 ```
-You should log out and then log in again.
-
+You must  log out and then log in again for this to take effect.
+This avoids issues for ttyUSB# or ttyACM# permissions.
 # Usage
 ### Real car
 ```
